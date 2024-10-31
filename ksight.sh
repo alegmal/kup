@@ -71,8 +71,11 @@ source /tmp/result
 if [[ $found_deprecated == "false" ]]; then
     echo ""
     echo "Found no deprecated APIs in the cluster!"
+    #TODO: check for compatibility of common components before exit (kube-state-metrics, metrics server...)
     exit 0
 fi
+
+#TODO: check for compatibility of common components before exit (kube-state-metrics, metrics server...)
 
 echo ""
 echo "!! Change API and possibly object schema before upgrading to the next Kubernetes version !!"
