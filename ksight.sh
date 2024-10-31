@@ -77,3 +77,4 @@ fi
 echo ""
 echo "!! Change API and possibly object schema before upgrading to the next Kubernetes version !!"
 echo "Documentation: https://kubernetes.io/docs/reference/using-api/deprecation-guide/#v1-$next_version"
+exit 1
