@@ -58,13 +58,6 @@ I believe it will be figured out in the future and pluto / kubent will have a fl
 * enforce custom annotation on all object that is always up to date with actual apiVersion and now you can specify it to kubent using `--additional-annotation` (haven't tested it - https://github.com/doitintl/kube-no-trouble?tab=readme-ov-file#arguments)
 * ??
 
-# //TODO: ksight
-Kubernetes upgrading insights
-
-a configurable script or something for easy version compatibility check of common kubernetes installations vs kubernetes version (kube-state-metrics, keda, karpenter...)
-
-... maybe just merge it in kup? idk
-
 # Contribution
 Think you can make it better and more useful? Nice! :) send a PR!
 
