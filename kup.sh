@@ -1,4 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+if ! command -v jq >/dev/null 2>&1; then
+    echo "jq is not installed. Please install jq to proceed."
+    exit 1
+fi
+
+if ! command -v kubectl >/dev/null 2>&1; then
+    echo "kubectl is not installed. Please install kubectl to proceed."
+    exit 1
+fi
+
+if ! kubectl cluster-info >/dev/null 2>&1; then
+    echo "kubectl is not configured or not connected to any cluster."
+    exit 1
+fi
 
 deprecated_list=$(jq -n '{}')
 
