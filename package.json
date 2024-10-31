@@ -1,0 +1,19 @@
+{
+  "name": "ksight",
+  "version": "1.0.0",
+  "description": "Kubernetes upgrading insights",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alegmal/ksight.git"
+  },
+  "author": "Aleg Malinovsky",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/alegmal/ksight/issues"
+  },
+  "homepage": "https://github.com/alegmal/ksight#readme"
+}
