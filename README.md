@@ -1,5 +1,8 @@
 # kup (Kubernetes UPgrade)
 
+## How it works?
+Configure you're kubectl, have jq ready and just run `./kup.sh`
+
 ## Why kup? What's the use case?
 
 * You want to upgrade your kubernetes cluster and you dont want to find out you forgot to update deprecated apiVersion after the upgrade... oopsie!
@@ -8,10 +11,12 @@
 * You want to quickly identify what objects deployed in your cluster need API update
 * You don't want to install and configure 3rd party tool even though it will look cool in your CV
 
-## Have you overlooked kubent and pluto?...
+## Have you overlooked kubent, pluto...?
 
 * kubent: https://github.com/doitintl/kube-no-trouble
 * pluto: https://github.com/FairwindsOps/pluto
+
+<i>these are just some of the common onces, there are more tools and plugins that do more or less the same thing</i>
 
 Great tools, great tools... they have one problem though: they look at the wrong place! 
 
@@ -49,14 +54,16 @@ To make GVK be consistently populated when reading from the server, we would hav
 2. AND adjust the client to stop clearing apiVersion/kind when decoding into a typed versioned object
 ```
 
+Until it fixed, why not just run `./kup.sh`?
 
-I believe it will be figured out in the future and pluto / kubent will have a flag or default behavior to check for apiVersion instead of last-applied annotation. But for now you have following options:
+---
 
-* `./kup.sh` and thats it - either you have things to update or you're good to go
+You can also...
+
 * helm dry run to generate your templates and run them through pluto for example (what if you have many repositories?)
 * make sure your last applied annotation exists and is always up to date
 * enforce custom annotation on all object that is always up to date with actual apiVersion and now you can specify it to kubent using `--additional-annotation` (haven't tested it - https://github.com/doitintl/kube-no-trouble?tab=readme-ov-file#arguments)
-* ??
+* install plugins that detect deprecated API (again, probably checking the wrong thing)
 
 # Contribution
 Think you can make it better and more useful? Nice! :) send a PR!
