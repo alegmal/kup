@@ -2,6 +2,8 @@
 
 if ! command -v jq >/dev/null 2>&1; then
     echo "jq is not installed. Please install jq to proceed."
+    echo "brew install jq"
+    echo "sudo apt-get install jq"
     exit 1
 fi
 
