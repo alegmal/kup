@@ -31,7 +31,7 @@ add_change() {
 }
 
 # Add changes
-add_change "28" "HorizontalPodAutoscaler" "autoscaling/v2"
+add_change "25" "HorizontalPodAutoscaler" "autoscaling/v2"
 add_change "25" "Cronjob" "batch/v1"
 add_change "25" "EndpointSlice" "discovery.k8s.io/v1"
 add_change "25" "PodDisruptionBudget" "policy/v1"
